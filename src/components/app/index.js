@@ -20,7 +20,7 @@ const App = (props, store)=>(
 App.store = _=>({
   name: 'Omis',
   clickHandler () {
-    this.name = 'Omis is very easy!'
+    this.name = 'Omis. It is very easy!'
     this.update()
   }
 })
