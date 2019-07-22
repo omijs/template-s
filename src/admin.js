@@ -1,6 +1,34 @@
-import { render } from 'omi'
-import './assets/index.css'
-import './elements/hello'
-import store from './store/admin-store'
 
-render(<hello-element />, '#root', store)
+import { render, h } from 'omis'
+
+const Counter = (props, store) => {
+  return (
+    <div>
+      <button onClick={store.sub}>-</button>
+      <span>{store.count}</span>
+      <button onClick={store.add}>+</button>
+    </div>
+  )
+}
+
+Counter.store = _ => {
+  return {
+    count: 1,
+    add() {
+      this.count++
+      this.update()
+    },
+    sub() {
+      this.count--
+      this.update()
+    }
+  }
+}
+
+Counter.css = `
+span{
+  color: red;
+}
+`
+
+render(<Counter />, '#root')
