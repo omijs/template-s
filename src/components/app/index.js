@@ -2,7 +2,7 @@ import { render, h } from 'omis'
 import logo from './logo.svg'
 import AppIntro from '../app-intro'
 
-const App = (props, store)=>(
+const App = (props, store) => (
   <div class="app">
     <header class="app-header">
       <img
@@ -13,13 +13,13 @@ const App = (props, store)=>(
       />
       <h1 class="app-title">Welcome to {store.name}</h1>
     </header>
-    <AppIntro /> 
+    <AppIntro />
   </div>
 )
 
-App.store = _=>({
+App.store = _ => ({
   name: 'Omis',
-  clickHandler () {
+  clickHandler() {
     this.name = 'Omis. It is very easy!'
     this.update()
   }

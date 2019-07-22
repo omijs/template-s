@@ -1,7 +1,7 @@
 import { h } from 'omis'
 import style from './_index.css'
 
-const AppIntro = (props, store)=>(
+const AppIntro = _ => (
   <div>
     <p class='app-intro'>
       To get started, edit <code>src/components/*/*.*</code> and save to reload.
